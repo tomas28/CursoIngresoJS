@@ -4,5 +4,12 @@ mostrar el importe con un Descuento del 25 %
 en el cuadro de texto "RESULTADO"*/
 function mostrarAumento()
 {
-	/**/primer comando de consola
+var descuento
+var sueldo 
+
+sueldo= importe.value;
+sueldo=parseInt(sueldo); 
+descuento = (sueldo -(sueldo *10)/100);
+
+resultado.value = descuento
 }
