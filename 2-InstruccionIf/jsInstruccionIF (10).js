@@ -5,7 +5,29 @@ function mostrar()
 	var mensaje;
 	numeroRandom=Math.floor((Math.random()*10)+1);
 	mensaje="";
-	if (numeroRandom<=3)
+	
+if (true) 
+{}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	/*if (numeroRandom<=3)
 	{
 		mensaje=numeroRandom+"para la proxima lo logras";
 	} 
