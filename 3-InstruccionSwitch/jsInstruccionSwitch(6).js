@@ -15,16 +15,6 @@ LaHora=parseInt(LaHora);
   case 10:
   case 11:
   	alert("es de mañana");
-	break;
-  case 12:  
-  case 13:
-  case 14:
-  case 15:
-  case 16:
-  case 17:
-  case 18:
-  case 19:
-  	alert("es de tarde");
   	break;
   case 20:
   case 21:
@@ -41,6 +31,8 @@ LaHora=parseInt(LaHora);
   case 6:
   	alert("es de madrugada");
   	break;
+    default:
+    alert("es de tarde");
 
   	
   	
