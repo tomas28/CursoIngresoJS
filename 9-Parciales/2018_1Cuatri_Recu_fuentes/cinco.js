@@ -1,48 +1,58 @@
 function mostrar()
 {
 var precioHabitacion;
-var tarjetaVisa;
-var paypal;
-var mercadoPago;
-var efectivo;
-var todoIncluido;
-var soloDesayunos;
+var descuento;
 var formaDePago;
-var precioFinal
+var precioFinal;
+var paquete;
 
 precioHabitacion=prompt("ingrese el precio del la habitacion");
 precioHabitacion=parseInt(precioHabitacion);
-formaDePago=prompt("ingrese de que forma quiere pagar, las opciones son: tarjetavisa, paypal, mercadopago, efectivo");
+formaDePago=prompt("ingrese de que forma quiere pagar, las opciones son: tarjeta visa, paypal, mercado pago, efectivo");
+paquete=prompt("si la forma de pago es con paypal o efectivo puede elegir entre las siguientes opciones: todo incluido y solo desayunos. De lo contrario deje en blanco el casillero.");
 
-
-switch(precioHabitacion) 
+switch(formaDePago) 
 {
-  case "tarjetavisa":
-    descuento=(precioHabitacion*10/100);
-    precioFinal=precioHabitacion-descuento;
-    mensaje="el precio final es: "+precioFinal;
-    break;
+  case "tarjeta visa":
+  case "mercado pago":
+      descuento=10;
+      break;
+  
   case "paypal":
-    descuento=precioHabitacion*15/100;
-    precioFinal=precioHabitacion-descuento;
-    mensaje="el precio final es: "+precioFinal;
-    break;
-  case "mercadopago":
-  	descuento=precioHabitacion*10/100;
-    precioFinal=precioHabitacion-descuento;
-    mensaje="el precio final es: "+precioFinal;
-  	break;
+      switch (paquete)
+      {
+        case "todo incluido":
+          descuento=25;
+           break;
+        
+        default:
+          descuento=15;
+      }
+      break;
+  
   case "efectivo":
-  	descuento=precioHabitacion*20/100;
-    precioFinal=precioHabitacion-descuento;
-    mensaje="el precio final es: "+precioFinal;
-    break;
-    default:
-    descuento=precioHabitacion*5/100;
-    precioFinal=precioHabitacion-descuento;
-    mensaje="el precio final es: "+precioFinal;
-   
-	}
+      switch(paquete)
+      {
+          case "todo incluido":
+            descuento=35;
+            break;
 
-	alert(mensaje);
+          case "solo desayunos":
+            descuento=30;
+            break;
+
+          default:
+              descuento=20;
+      }
+    	
+      break;
+
+    default:
+        descuento=5;
+        break;   
+	}
+  precioFinal=precioHabitacion*descuento/100;
+  precioFinal=precioHabitacion-descuento;
+	alert("precio final de la compra: $"+precioFinal);
+
 }

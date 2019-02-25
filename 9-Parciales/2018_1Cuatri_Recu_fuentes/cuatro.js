@@ -8,82 +8,75 @@ function mostrar()
 	var importe2;
 	var importe3;
 	var importe4;
+	var mayorImporte;
 	var sumaDeImportes;
 	var descuento;
-	var descuentoFinal;
 	var precioFinal;
-	var mensaje;
 	var aumento;
-	var aumentoFinal;
 
-	importe1=prompt("porfavor ingrese el importe del producto");
+	importe1=prompt("por favor ingrese el primer importe");
 	importe1=parseInt(importe1);
 	
-	importe2=prompt("porfavor ingrese el importe del producto");
+	importe2=prompt("por favor ingrese el segundo importe");
 	importe2=parseInt(importe2);
 	
-	importe3=prompt("porfavor ingrese el importe del producto");
+	importe3=prompt("por favor ingrese el tercer importe");
 	importe3=parseInt(importe3);
 	
-	importe4=prompt("porfavor ingrese el importe del producto");
+	importe4=prompt("por favor ingrese el cuarto importe");
 	importe4=parseInt(importe4);
 
-	sumaDeImportes=importe1+importe2+importe3+importe4
-	
-	
-	//console.log(sumaDeImportes);
-	
-
-	if (sumaDeImportes>100) 
+	//sumaDeImportes=importe1+importe2+importe3+importe4
+	if (importe1>importe2 && importe1>importe3 && importe1>importe4) 
 	{
-		descuento=(sumaDeImportes*10)/100;
-		precioFinal=sumaDeImportes-descuento;
-		mensaje =precioFinal;
-	}	
+		mayorImporte=importe1;
+	}
 	else
 	{
-		if (sumaDeImportes>50)
+		if (importe2>importe1 && importe2>importe3 && importe2>importe4) 
+		{
+			mayorImporte=importe2;
+		}
+		else
+		{
+			if (importe3>importe1 && importe3>importe2 && importe3>importe4) 
+			{
+				mayorImporte=importe3;
+			}
+			else
+			{
+				mayorImporte=importe4;
+			}//if (importe3>importe1 && importe3> importe2 && importe3>importe4) 	
+		}//if (importe2>importe1 && importe2>importe3 && importe2>importe4) 	
+	}//if (importe1>importe2 && importe1>importe3 && importe1>importe4) 	
+
+	sumaDeImportes=importe1+importe2+importe3+importe4;
+	
+	if (sumaDeImportes>99) 
+	{
+		descuento=10;
+	}
+	else
+	{
+		if (sumaDeImportes>49)
 		 {
-		 	descuento=(sumaDeImportes*5)/100;
-			precioFinal=sumaDeImportes-descuento;
-			mensaje =precioFinal;
+		 	descuento=5;
 		 }
 		 else
 		 {
-		 	aumento=(sumaDeImportes*15)/100;
-			precioFinal=sumaDeImportes+aumento;
-			mensaje=precioFinal;
+		 	aumento=sumaDeImportes*15/100
+		 	sumaDeImportes=sumaDeImportes*aumento
+		 	descuento=0;
+		 }//if (sumaDeImportes>49)
+	}//if (sumaDeImportes>99) 
 
-		 }
-	}
-	mensaje="el precio final es: "+precioFinal;
+	precioFinal=sumaDeImportes*descuento/100;
+	precioFinal=sumaDeImportes-descuento;
 
-		/*if (sumaDeImportes>50 && sumaDeImportes<100) 
-	
-		
-		(sumaDeImportes*5)/100=descuento;
-		descuentoFinal=sumaDeImportes-descuento;
-		mensaje =descuentoFinal;
-		
-	}
-	else
-	{
-		if (sumaDeImportes<50) 
-		{
-			aumento=(sumaDeImportes*20)/100;
-			aumentoFinal=sumaDeImportes+aumento;
-			mensaje=aumentoFinal;
-		}
-	}
+	alert("el importe de mayor valor es: " +mayorImporte+" y el precio final es: $"+precioFinal);
 
-			alert(mensaje);
-	/*		
-	if (sumaDeImportes>=100) 
-	{
-		descuento=sumaDeImportes/10;
-		mensaje=descuentoFinal;
-	}
-	
-*/
+
+
 
 }
+	
