@@ -10,7 +10,7 @@ function mostrar()
 	respuesta = 'si';
 
 
-	while (respuesta == "si")
+	while (respuesta !="no")
 
 	{
 
@@ -18,7 +18,7 @@ function mostrar()
 	numero = prompt("Por Favor, Ingrese El Numero " + contador);
 	numero = parseInt(numero);
 	acumulador = acumulador + numero;
-	respuesta = prompt("Desea Ingresar Mas Datos??? Ingrese SI En Minuscula Para Continuar: ");
+	respuesta = prompt("cuando desee dejar de ingresar numeros ingrese no, de lo contrario no ingrese nada");
 
 	}	
 

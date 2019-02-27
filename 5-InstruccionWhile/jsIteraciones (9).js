@@ -15,10 +15,10 @@ function mostrar()
 	minimo= 0;
 	bandera=true;
 
-	while (respuesta == "si") 
+	while (respuesta != "no") 
 
 	{
-		
+		contador=contador +1;
 		numero = prompt("Por Favor, Ingrese El Numero " + contador);
 		numero = parseInt(numero);
 		
@@ -41,7 +41,7 @@ function mostrar()
 			}
 		}
 		
-		respuesta = prompt("Desea Ingresar Mas Datos??? Ingrese SI En Minuscula Para Continuar: ");
+		respuesta = prompt("cuando desee dejar de ingresar numeros ingrese no, de lo contrario no ingrese nada: ");
 	}	
 	document.getElementById('maximo').value = maximo;
 	document.getElementById('minimo').value = minimo;
