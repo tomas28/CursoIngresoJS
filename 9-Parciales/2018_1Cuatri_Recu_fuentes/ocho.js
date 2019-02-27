@@ -5,7 +5,7 @@ function mostrar()
 	var respuesta="si";
 	var contador=0;
 	var numerosImpares;
-	
+	var numerosPositivos;
 	while(respuesta!="no")
 	{
 		numero=prompt("ingrese un numero");
@@ -23,5 +23,14 @@ function mostrar()
 		}
 		respuesta=prompt("si desea terminar de ingresar los datos escriba no");
 		contador=contador+1;
+	
+	if (numero>0) 
+	{
+		numerosPositivos
+	}
+
+
+
+
 	}
 }
