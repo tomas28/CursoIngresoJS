@@ -74,9 +74,5 @@ function mostrar()
 	precioFinal=sumaDeImportes-descuento;
 
 	alert("el importe de mayor valor es: " +mayorImporte+" y el precio final es: $"+precioFinal);
-
-
-
-
 }
 	
