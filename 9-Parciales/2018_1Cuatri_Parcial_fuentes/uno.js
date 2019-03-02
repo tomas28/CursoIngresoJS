@@ -1,7 +1,10 @@
 
 function mostrar()
 {
-	var nombre1;
+	
+	
+
+	/*var nombre1;
 	var nombre2;
 	var edad1;
 	var edad2;
@@ -20,5 +23,5 @@ function mostrar()
 
 
 	alert("ustedes son: "+nombre1+" y "+nombre2+", sus edades son:  "+edad1+" y "+edad2+", y la suma de sus edades son: "+resultado);
-	
+	*/
 }
