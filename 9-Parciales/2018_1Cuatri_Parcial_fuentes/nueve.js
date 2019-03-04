@@ -16,10 +16,10 @@ function mostrar()
 	var promedio;
 	var contador=0;
 	var acumuladorDePeso=0;
-	var maximoPeso;
+	var maximoPeso=1;
 	var marcaMaximoPeso;
 	var banderaPesoMaximo=false;
-	var minimoPeso;
+	var minimoPeso=100;
 	while(respuesta==true)
 	{
 		
@@ -43,16 +43,16 @@ function mostrar()
 		{
 			contadorTemperaturasPares++;
 		}
-		if(banderaPesoMaximo==false || peso>maximoPeso)
+		if( peso>maximoPeso)
 		{
 			marcaMaximoPeso=marca;
 			maximoPeso=peso;
-			banderaPesoMaximo=true;
+			
 		}
-		if(banderaPesoMaximo==false || peso<minimoPeso)
+		if(peso<minimoPeso)
 		{
 			minimoPeso=peso;
-			banderaPesoMaximo=true;
+			
 		}
 		if (temperatura<0) 
 		{
