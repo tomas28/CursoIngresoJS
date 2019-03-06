@@ -4,7 +4,43 @@ function mostrar()
 //en el case de ser -de 50 le sumo un 20%
 
 {
-	var importe1;	
+	
+	var numero1;
+	var numero2;
+	var resta;
+	var suma;
+	var mensaje;
+
+	numero1=prompt("ingrese el primer numero");
+	numero1=parseInt(numero1);
+	numero2=prompt("ingrese el segundo numero");
+	numero2=parseInt(numero2);
+
+	if (numero1==numero2) 
+	{
+		mensaje="los numeros son iguales ellos son:"+numero1+", "+numero2;
+	}
+	else
+	{
+		if (numero1>numero2) 
+		{
+			resta=numero1-numero2;
+			mensaje="el resultado de la resta es: "+resta;
+		}
+		else
+		{
+			suma=numero1+numero2;
+			mensaje="el resultado de la suma es: "+suma;
+		}	
+	}	
+	if (suma>10) 
+	{
+		mensaje="a suma es "+suma+" y supero el 10";
+	}
+
+
+
+	/*var importe1;	
 	var importe2;
 	var importe3;
 	var importe4;
@@ -74,5 +110,7 @@ function mostrar()
 	precioFinal=sumaDeImportes-descuento;
 
 	alert("el importe de mayor valor es: " +mayorImporte+" y el precio final es: $"+precioFinal);
+
+*/
 }
 	

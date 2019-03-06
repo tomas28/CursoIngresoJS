@@ -8,8 +8,64 @@
 function mostrar()
 {
 
-
 	var numero1;
+	var numero2;
+	var resta;
+	var suma;
+	var mensaje;
+
+	numero1=prompt("ingrese el primer numero");
+	numero1=parseInt(numero1);
+	numero2=prompt("ingrese el segundo numero");
+	numero2=parseInt(numero2);
+
+	if (numero1==numero2) 
+	{
+		mensaje="los numeros son iguales ellos son:"+numero1+", "+numero2;
+	}
+	else
+	{
+		if (numero1>numero2) 
+		{
+			resta=numero1-numero2;
+			mensaje="el resultado de la resta es: "+resta;
+		}
+		else
+		{
+			suma=numero1+numero2;
+			mensaje="el resultado de la suma es: "+suma;
+		}
+		if (suma>10) 
+		{
+		mensaje="a suma es "+suma+" y supero el 10";
+		}
+	
+	}	
+	
+	alert(mensaje);
+
+
+	/*else  
+	{
+		if (numero1>numero2)
+		{
+			resta=numero1-numero2;
+			mensaje="el resultado de la resta es: "+resta;
+		}
+		else
+		{
+			suma=numero1+numero2;
+			mensaje="el resultado de la suma es: "+suma;
+		}
+		if (suma>10) 
+		{
+			mensaje="la suma es "+suma+" y supero el 10";
+		}
+	}
+	
+	alert(mensaje);
+
+	/*var numero1;
 	var numero2;
 	var suma;
 	var mensaje;

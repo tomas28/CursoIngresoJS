@@ -3,6 +3,18 @@ function mostrar()
 	
 	var nombre;
 	var localidad;
+	var perimetro;
+	
+	nombre=elNombre.value;
+	nombre=parseInt(nombre);
+
+	localidad=laLocalidad.value;
+
+	alert("usted es: "+nombre+" y  vive en la localidad "+ localidad);
+
+
+	/*var nombre;
+	var localidad;
 
 	nombre=elNombre.value;
 	localidad=laLocalidad.value;
